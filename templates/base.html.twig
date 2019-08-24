@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block title %}Cottect{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+</head>
+<body id="{% block page_id %}{% endblock %}">
+{% block header %}
+    <header>
+        <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand " href="/">Cottect</a>
+                <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse"
+                        data-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="primary-nav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled my-2 my-lg-0">
+                        <li>
+                            {% include 'form/login_header.html.twig' %}
+                        </li>
+                        <li>
+                            <a href="#">{{ 'forgotten_account'|trans }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+{% endblock %}
+{% block body %}
+    <div id="main">
+        {% block main %}{% endblock %}
+    </div>
+{% endblock %}
+{% block footer %}
+    <footer id="footer" class="container">
+        <div class="row">
+            <div class="col-md-12 p-0 pt-5 pb-4">
+                <ul class="list-inline">
+                    {% block footer_detail_authenticated %}
+                        <li class="list-inline-item"><a href="#">Register</a>
+                        </li>
+                        <li class="list-inline-item"><a href="#">Login</a></li>
+                    {% endblock %}
+                    <li class="list-inline-item"><a href="#">Blog</a></li>
+                    <li class="list-inline-item"><a href="/developers">Developers</a></li>
+                    <li class="list-inline-item"><a href="#">About</a></li>
+                    <li class="list-inline-item"><a href="/cookies">Cookies</a></li>
+                    <li class="list-inline-item"><a href="/privacy">Privacy</a></li>
+                    <li class="list-inline-item"><a href="/terms">Terms</a></li>
+                    <li class="list-inline-item"><a href="/help">Help</a></li>
+                </ul>
+                <p>Cottect © {{ "now"|date("Y") }}</div>
+        </div>
+    </footer>
+{% endblock %}
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+{% endblock %}
+</body>
+</html>
