@@ -1,32 +1,32 @@
 <div id="register-form" class="card border-light p-3">
     <div class="card-body">
-        {{ form_start(register) }}
+        {{ form_start(register_form) }}
         <h3>{{ 'create_a_new_account'|trans }}</h3>
         <p>Whether you sell online, on social media, in store, or out of the trunk of your car,
             Cottect has you covered.</p>
         <div class="form-row">
             <div class="col">
-                {{ form_row(register.first_name) }}
+                {{ form_row(register_form.first_name) }}
             </div>
             <div class="col">
-                {{ form_row(register.last_name) }}
+                {{ form_row(register_form.last_name) }}
             </div>
         </div>
-        {{ form_row(register.mobile_or_email) }}
-        {{ form_row(register.password) }}
+        {{ form_row(register_form.mobile_or_email) }}
+        {{ form_row(register_form.password) }}
         <div class="form-group">
             <label>{{ 'birthday'|trans }}</label>
             <div class="input-group birthday">
                 <div class="mr-2">
-                    {{ form_row(register.birthday.year, {'label': false}) }}
+                    {{ form_row(register_form.birthday.year, {'label': false}) }}
                 </div>
                 <div class="mr-2">
-                    {{ form_row(register.birthday.month,{'label': false}) }}
+                    {{ form_row(register_form.birthday.month,{'label': false}) }}
                 </div>
-                {{ form_row(register.birthday.day,{'label': false}) }}
+                {{ form_row(register_form.birthday.day,{'label': false}) }}
             </div>
         </div>
-        {{ form_row(register.gender) }}
+        {{ form_row(register_form.gender) }}
         <div class="form-group">
             <small class="form-text text-muted">By clicking Create
                 an account, you agree to our <a href="#" id="terms-link" target="_blank"
@@ -39,6 +39,6 @@
             </small>
         </div>
         <button type="submit" class="btn btn-primary">{{ 'create_an_account'|trans }}</button>
-        {{ form_end(register) }}
+        {{ form_end(register_form) }}
     </div>
 </div>

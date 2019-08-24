@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
+use App\Form\LoginForm;
 use App\Form\RegisterForm;
-use App\Form\LoginHeaderForm;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,14 +19,14 @@ class RegisterController extends AbstractController
      */
     public function index(Request $request)
     {
-        $loginHeaderForm = $this->createForm(LoginHeaderForm::class);
-        $form = $this->createForm(RegisterForm::class);
+        $loginForm = $this->createForm(LoginForm::class);
+        $registerForm = $this->createForm(RegisterForm::class);
 
         return $this->render(
             'register.html.twig',
             [
-                'login' => $loginHeaderForm->createView(),
-                'register' => $form->createView(),
+                'login_form' => $loginForm->createView(),
+                'register_form' => $registerForm->createView(),
             ]
         );
     }

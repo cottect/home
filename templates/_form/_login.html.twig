@@ -1,0 +1,5 @@
+{{ form_start(login_form, {'attr': {'class': 'form-inline'}}) }}
+    {{ form_row(login_form.mobile_or_email,{'attr': {'class': 'mr-sm-2'}}) }}
+    {{ form_row(login_form.password,{'attr': {'class': 'mr-sm-2'}}) }}
+    {{ form_row(login_form.login,{'attr': {'class': 'btn-outline-light'}}) }}
+{{ form_end(login_form) }}

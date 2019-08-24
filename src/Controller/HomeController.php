@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
+use App\Form\LoginForm;
 use App\Form\RegisterForm;
-use App\Form\LoginHeaderForm;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,13 +20,13 @@ class HomeController extends AbstractController
     public function index(Request $request)
     {
         $registerForm = $this->createForm(RegisterForm::class);
-        $loginHeaderForm = $this->createForm(LoginHeaderForm::class);
+        $loginForm = $this->createForm(LoginForm::class);
 
         return $this->render(
             'index.html.twig',
             [
-                'register' => $registerForm->createView(),
-                'login' => $loginHeaderForm->createView()
+                'register_form' => $registerForm->createView(),
+                'login_form' => $loginForm->createView()
             ]
         );
     }
