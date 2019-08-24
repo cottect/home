@@ -16,10 +16,10 @@
                         <h3 class="mb-5">{{ 'login_to_cottect'|trans }}</h3>
                         {{ form_row(login_form.mobile_or_email, {'attr':{'placeholder':'mobile_or_email'|trans }}) }}
                         {{ form_row(login_form.password) }}
-                        {{ form_row(login_form.login, {'attr':{'class':'btn btn-primary btn-lg btn-block'}}) }}
+                        {{ form_row(login_form.login, {'attr':{'class':'btn btn-primary btn-block'}}) }}
                         {{ form_end(login_form) }}
-                        <a href="#" class="card-link">Forgotten account?</a>
-                        <a href="#" class="card-link">Register for Cottect</a>
+                        <a href="#" class="card-link">{{ 'for_gotten_account'|trans }}</a>
+                        <a href="{{ path('register_index') }}" class="card-link">{{ 'register_for_cottect'|trans }}</a>
                     </div>
                 </div>
             </div>
