@@ -11,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class LoginController extends AbstractController
 {
     /**
-     * @Route("/register", name="login_index")
+     * @Route("/login", name="login_index")
      *
      * @param Request $request
      * @return Response

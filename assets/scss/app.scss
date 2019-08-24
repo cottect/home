@@ -1,0 +1,22 @@
+@import "variables";
+$primary: $brand-primary;
+@import "~bootstrap/scss/bootstrap";
+@import '~lato-font/scss/public-api';
+
+#main {
+  background: linear-gradient(#fff, #f5f5f5);
+}
+
+#home {
+  #main {
+    background: url('../images/background.jpg') no-repeat;
+    background-size: 100%;
+  }
+}
+
+#header{
+  .navbar-brand{
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
