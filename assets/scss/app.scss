@@ -1,11 +1,13 @@
 @import "variables";
+
 $primary: $brand-primary;
 @import "~bootstrap/scss/bootstrap";
 @import '~lato-font/css/lato-font.min.css';
 
-#main{
+#main {
   background: linear-gradient(#fff, $gray-200);
 }
+
 #home {
   #main {
     background: url('../images/background.jpg') no-repeat;
@@ -13,9 +15,18 @@ $primary: $brand-primary;
   }
 }
 
-#header{
-  .navbar-brand{
+#header {
+  .navbar-brand {
     font-size: 2rem;
     font-weight: 700;
+  }
+}
+
+#register-form {
+  .input-group.birthday .form-group{
+    margin-bottom: 0;
+  }
+  form[name=register_form] .form-check:first-child {
+    padding-left: 0;
   }
 }

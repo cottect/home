@@ -23,8 +23,6 @@ class LoginHeaderForm extends AbstractForm
                 self::LABEL => false,
                 self::ATTR => [self::PLACEHOLDER => self::PASS,],
             ])
-            ->add(self::LOGIN, SubmitType::class, [
-                'attr' => ['class' => 'btn-secondary'],
-            ]);
+            ->add(self::LOGIN, SubmitType::class);
     }
 }
