@@ -13,7 +13,7 @@
                 <div id="login-form" class="card border-light p-3">
                     <div class="card-body text-center">
                         {{ form_start(login_form) }}
-                        <h3 class="mb-5">{{ 'login_to_cottect'|trans }}t</h3>
+                        <h3 class="mb-5">{{ 'login_to_cottect'|trans }}</h3>
                         {{ form_row(login_form.mobile_or_email, {'attr':{'placeholder':'mobile_or_email'|trans }}) }}
                         {{ form_row(login_form.password) }}
                         {{ form_row(login_form.login, {'attr':{'class':'btn btn-primary btn-lg btn-block'}}) }}
