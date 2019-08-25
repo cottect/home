@@ -3,9 +3,17 @@
 $primary: $brand-primary;
 @import "~bootstrap/scss/bootstrap";
 @import '~lato-font/css/lato-font.min.css';
+@import "~font-awesome/scss/font-awesome.scss";
 
 body {
   font-size: 0.85rem;
+}
+
+#home {
+  #main {
+    background: url("../images/background.jpg") no-repeat center;
+    background-size: 100%;
+  }
 }
 
 #main {

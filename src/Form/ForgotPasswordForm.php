@@ -30,6 +30,7 @@ class ForgotPasswordForm extends AbstractForm
                 self::ATTR => [self::PLACEHOLDER => self::MOBILE_OR_EMAIL_SHORT,],
             ])
             ->add(self::NEXT, SubmitType::class)
+            ->setMethod('post')
             ->setAction($this->router->generate('submit_code_index'));
     }
 }

@@ -20,6 +20,7 @@ class SubmitCodeForm extends AbstractForm
                 self::LABEL => false,
                 self::ATTR => [self::PLACEHOLDER => self::ENTER_SIX_DIGIT_NUMBER,],
             ])
+            ->setMethod('post')
             ->add(self::SUBMIT, SubmitType::class);
     }
 }

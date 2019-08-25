@@ -32,6 +32,7 @@ class LoginForm extends AbstractForm
                 self::ATTR => [self::PLACEHOLDER => self::PASS,],
             ])
             ->add(self::LOGIN, SubmitType::class)
+            ->setMethod('post')
             ->setAction($this->router->generate('login_index'));
     }
 }
