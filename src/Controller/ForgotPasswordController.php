@@ -33,13 +33,16 @@ class ForgotPasswordController extends AbstractController
     }
 
     /**
-     * @Route("/forgot-password/submit-code", name="submit_code_index", methods={"POST"})
+     * @Route("/forgot-password/submit-code", name="submit_code_index")
      *
      * @param Request $request
      * @return Response
      */
     public function submitCode(Request $request)
     {
+        if($request->isMethod(Request::METHOD_GET)){
+            return $this->redirectToRoute('forgot_password_index');
+        }
         $loginForm = $this->createForm(LoginForm::class);
         $submitCodeForm = $this->createForm(SubmitCodeForm::class);
         $viewData = [

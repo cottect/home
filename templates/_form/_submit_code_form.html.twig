@@ -1,8 +1,7 @@
 <div class="card-body">
     {{ form_start(form) }}
     <h3 class="mb-3">{{ 'check_your_phone'|trans }}</h3>
-    <p>Enter the verification code sent to: </p>
-    <p>+••••••••7975</p>
+    <p>Enter the verification code sent to: <span>+••••••••7975</span></p>
     {{ form_row(form.code) }}
     {{ form_row(form.submit, {'attr':{'class':'btn btn-primary btn-block'}}) }}
     {{ form_end(form) }}
