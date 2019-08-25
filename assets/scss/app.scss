@@ -4,15 +4,16 @@ $primary: $brand-primary;
 @import "~bootstrap/scss/bootstrap";
 @import '~lato-font/css/lato-font.min.css';
 
+body {
+  font-size: 0.85rem;
+}
+
 #main {
   background: linear-gradient(#fff, $gray-200);
 }
 
-#home {
-  #main {
-    background: url('../images/background.jpg') no-repeat;
-    background-size: 100%;
-  }
+form.login-form .password-group {
+  margin-top: 1.5rem !important;
 }
 
 #header {
@@ -23,9 +24,10 @@ $primary: $brand-primary;
 }
 
 #register-form {
-  .input-group.birthday .form-group{
+  .input-group.birthday .form-group {
     margin-bottom: 0;
   }
+
   form[name=register_form] .form-check:first-child {
     padding-left: 0;
   }

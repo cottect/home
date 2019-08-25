@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>{% block title %}Cottect{% endblock %}</title>
+    <title>{% block title %}{{ 'site_name'|trans }}{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
 </head>
 <body id="{% block page_id %}{% endblock %}">
 {% block header %}
     <header>
         <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container pt-4 pb-2">
-                <a class="navbar-brand" href="/">Cottect</a>
+            <div class="container">
+                <a class="navbar-brand" href="/">{{ 'site_name'|trans }}</a>
                 <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse"
                         data-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false"
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse pt-3 pb-3" id="primary-nav">
                     <ul class="navbar-nav mr-auto">
-
                         <li class="nav-item">
                             <a class="nav-link" href="#">Pricing</a>
                         </li>
@@ -35,13 +33,12 @@
                         {% include '_form/_login.html.twig' %}
                     {% endblock %}
                 </div>
-
             </div>
         </nav>
     </header>
 {% endblock %}
 {% block body %}
-    <div id="main" class="bg-primary">
+    <div id="main">
         {% block main %}{% endblock %}
     </div>
 {% endblock %}
@@ -55,14 +52,14 @@
                         </li>
                         <li class="list-inline-item"><a href="{{ path('login_index') }}">Login</a></li>
                     {% endblock %}
-                    <li class="list-inline-item"><a href="/developers">Developers</a></li>
+                    <li class="list-inline-item"><a href="#">Developers</a></li>
                     <li class="list-inline-item"><a href="#">About</a></li>
-                    <li class="list-inline-item"><a href="/cookies">Cookies</a></li>
-                    <li class="list-inline-item"><a href="/privacy">Privacy</a></li>
-                    <li class="list-inline-item"><a href="/terms">Terms</a></li>
-                    <li class="list-inline-item"><a href="/help">Help</a></li>
+                    <li class="list-inline-item"><a href="#">Cookies</a></li>
+                    <li class="list-inline-item"><a href="#">Privacy</a></li>
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Help</a></li>
                 </ul>
-                <p>Cottect © {{ "now"|date("Y") }}</div>
+                <p>{{ 'site_name'|trans }} © {{ "now"|date("Y") }}</div>
         </div>
     </footer>
 {% endblock %}

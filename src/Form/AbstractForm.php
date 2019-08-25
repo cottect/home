@@ -22,4 +22,6 @@ abstract class AbstractForm extends AbstractType
     const ATTR = 'attr';
     const BIRTHDAY_FORMAT = 'yyyyMMdd';
     const LOGIN = 'login';
+    const SUBMIT = 'submit';
+    const CODE = 'code';
 }

@@ -1,5 +1,14 @@
-{{ form_start(login_form, {'attr': {'class': 'form-inline'}}) }}
-    {{ form_row(login_form.mobile_or_email,{'attr': {'class': 'mr-sm-2'}}) }}
-    {{ form_row(login_form.password,{'attr': {'class': 'mr-sm-2'}}) }}
-    {{ form_row(login_form.login,{'attr': {'class': 'btn-outline-light'}}) }}
+{{ form_start(login_form, {'attr': {'class': 'form-inline login-form'}}) }}
+{{ form_row(login_form.mobile_or_email,{'attr': {'class': 'mr-sm-2'}}) }}
+<ul class="list-unstyled m-0 password-group">
+    <li>
+        {{ form_row(login_form.password,{'attr': {'class': 'mr-sm-2'}}) }}
+    </li>
+    <li>
+        <div class="form-group m-0 mt-1 ">
+            <a href="{{ path('forgot_password_index') }}" class="text-secondary">{{ 'forgot_password'|trans }}</a>
+        </div>
+    </li>
+</ul>
+{{ form_row(login_form.login,{'attr': {'class': 'btn-outline-light'}}) }}
 {{ form_end(login_form) }}
